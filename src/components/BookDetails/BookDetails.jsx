@@ -11,6 +11,10 @@ const BookDetails = () => {
 
     const { bookId: currentBookId, image, bookName, author, tags, review, totalPages, publisher, yearOfPublishing, rating } = book;
 
+    const handleMarkAsRead = () => {
+
+    }
+
     return (
         <div>
             <h2>Book Details: {bookId}</h2>
@@ -18,8 +22,8 @@ const BookDetails = () => {
                 <div className="w-1/2 py-2">
                     <img className="w-[300px]" src={image} alt="" />
                     <div className="py-4">
-                        <button className="btn btn-accent mr-32">Read</button>
-                        <button className="btn btn-accent">Wish list</button>
+                        <button onClick={handleMarkAsRead} className="btn btn-accent mr-10">Mark as Read</button>
+                        <button className="btn btn-accent">Add to Wish list</button>
                     </div>
                 </div>
                 <div className="w-1/2">
